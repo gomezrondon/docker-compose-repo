@@ -1,0 +1,13 @@
+version: '2.1'
+
+services:
+ jenkins:
+   container_name: jenkins-server
+   image: jenkins/jenkins:lts
+   ports:
+     - 8080:8080
+     - 50000:50000
+   volumes:
+     - my-datavolume:/var/jenkins_home
+volumes:
+ my-datavolume:
